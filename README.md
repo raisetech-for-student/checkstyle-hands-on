@@ -62,29 +62,29 @@ BUILD SUCCESSFULとコンソールに表示されるまで待ちましょう。
 
 src/main/java/com/raisetech/checkstylesample下にSAMPLEというパッケージ名を作ってください。    
 
-SAMPLE配下にクラス名をsampleClassとしたJavaファイルを作成しましょう。  
+SAMPLE配下にクラス名をsampleClassとしたJavaファイルを作成しましょう。
 
 ```java
-package com.raisetech.checkstylesample.SAMPLE;
+package com.raisetech.checkstylesample.sample;
 
 public class sampleClass {
-  private String FirstName;
+    private String FirstName;
 
-  private String family_name;
+    private String family_name;
 
-  private int age;
+    private int age;
 
-  public String getFirstName() {
-    return FirstName;
-  }
+    public String getFirstName() {
+        return FirstName;
+    }
 
-  public String getFamily_name() {
-    return family_name;
-  }
+    public String getFamily_name() {
+        return family_name;
+    }
 
-  public int getAge() {
-    return age;
-  }
+    public int getAge() {
+        return age;
+    }
 }
 ```
 
@@ -103,13 +103,13 @@ BUILD SUCCESSFULとコンソールに表示されるまで待ちましょう。
 ## エラー内容を読み解く
 
 ```shell
-Package name 'com.raisetech.checkstylesample.SAMPLE' must match pattern '^[a-z]+(\.[a-z][a-z0-9]*)*$'.
+Package name 'com.raisetech.checkstylesample.sample' must match pattern '^[a-z]+(\.[a-z][a-z0-9]*)*$'.
 ```
 
-問題のある箇所はソースコードで言うところのこちらになります。  
+問題のある箇所はソースコードで言うところのこちらになります。
 
 ```java
-package com.raisetech.checkstylesample.SAMPLE;
+package com.raisetech.checkstylesample.sample;
 ```
 
 `'^[a-z]+(\.[a-z][a-z0-9]*)*$'`についてですが、これは文字化けではなく正規表現と呼ばれるものです。  
