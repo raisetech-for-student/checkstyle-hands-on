@@ -306,7 +306,7 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 UIの変更がない限りはこの手順で連携できると思います。
 
 ### 結果
-<img width="833" alt="Discord通知" src="https://user-images.githubusercontent.com/120367482/233900344-6e0a248c-52f8-42d9-b4c5-0bf4213eaea0.png">
+<img width="715" alt="Discord通知" src="https://user-images.githubusercontent.com/120367482/233907447-653fdae5-c11a-4c4e-bf02-9e241e7c453d.png">
 
 
 ### まとめ
