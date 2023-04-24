@@ -254,10 +254,11 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 要参照[英語]: https://github.com/sarisia/actions-status-discord
 
 #### 以下をRun Checkstyleの下に追加します。  
-しかし、追加しただけではエラーになります。  
-DiscordとGitHubを連携させる必要があります。
+しかし、追加しただけではエラーになるのでコメントアウトしています。  
+まずDiscordとGitHubを連携させる必要があります。
 ```shell
-    - name: Discord Notification
+<!-- 
+- name: Discord Notification
       uses: sarisia/actions-status-discord@v1
       if: always()
       with:
@@ -268,7 +269,8 @@ DiscordとGitHubを連携させる必要があります。
         description: "Run Checkstyle"
         color: "#cb88d2"
         url: "https://github.com/sarisia/actions-status-discord"
-        username: GitHub Actions
+        username: GitHub Actions 
+-->
 ```
 
 ### キーワードの役割
@@ -298,6 +300,12 @@ DiscordとGitHubを連携させる必要があります。
 8. Nameを「`DISCORD_WEBHOOK`」に設定
 9. Secretにコピーした「`ウェブフックURL`」を設定
 10. add secret -> 連携完了
+
+### 最後に
+
+連携が完了したらコメントアウト`<!-- -->`を外します。  
+プッシュしたら連携させたDiscordのサーバーを確認してみましょう。  
+UIの変更がない限りはこの手順で連携できると思います。
 
 ### まとめ
 以上でCI実行時にDiscordに通知が来るようになります。  
