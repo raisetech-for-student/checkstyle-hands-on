@@ -253,8 +253,8 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 
 要参照[英語]: https://github.com/sarisia/actions-status-discord
 
-#### 以下をRun Checkstyleの下に追加します。  
-しかし、追加しただけではエラーになるのでコメントアウトしています。  
+#### 以下をRun Checkstyleの下に追加します(あらかじめ追加されてます)
+しかし、追加しただけではエラーになるのでコメントアウトしてます。  
 まずDiscordとGitHubを連携させる必要があります。
 ```shell
     #- name: Discord Notification
