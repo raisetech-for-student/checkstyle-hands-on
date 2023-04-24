@@ -257,8 +257,8 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 しかし、追加しただけではエラーになるのでコメントアウトしています。  
 まずDiscordとGitHubを連携させる必要があります。
 ```shell
-<!-- 
-- name: Discord Notification
+    <!--
+    - name: Discord Notification
       uses: sarisia/actions-status-discord@v1
       if: always()
       with:
@@ -269,8 +269,8 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
         description: "Run Checkstyle"
         color: "#cb88d2"
         url: "https://github.com/sarisia/actions-status-discord"
-        username: GitHub Actions 
--->
+        username: GitHub Actions
+   -->
 ```
 
 ### キーワードの役割
@@ -286,8 +286,6 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 - `color`: 背景色
 - `url`: タイトルクリック時に飛ぶURL
 - `userneme`: webhookの名前を上書き
-### 結果
-<img width="1200" alt="Discord通知" src="https://user-images.githubusercontent.com/120367482/233845960-b8852dec-10cf-43c2-a738-d6c41ac545c5.png">
 
 ### GitHubとDiscordの連携手順
 1. Discordを開く -> 新規サーバーを作成(追加)
@@ -306,6 +304,10 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 連携が完了したらコメントアウト`<!-- -->`を外します。  
 プッシュしたら連携させたDiscordのサーバーを確認してみましょう。  
 UIの変更がない限りはこの手順で連携できると思います。
+
+### 結果
+<img width="833" alt="Discord通知" src="https://user-images.githubusercontent.com/120367482/233900344-6e0a248c-52f8-42d9-b4c5-0bf4213eaea0.png">
+
 
 ### まとめ
 以上でCI実行時にDiscordに通知が来るようになります。  
