@@ -264,8 +264,8 @@ DiscordとGitHubを連携させる必要があります。
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         status: ${{ job.status }}
         content: "Hey <@everyone>"
-        title: "deploy"
-        description: "Build and deploy to GitHub Pages"
+        title: "Checkstyle"
+        description: "Run Checkstyle"
         color: "#cb88d2"
         url: "https://github.com/sarisia/actions-status-discord"
         username: GitHub Actions
