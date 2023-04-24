@@ -257,20 +257,18 @@ checkstyle.ymlについてはCIを理解するのに重要なので一読して�
 しかし、追加しただけではエラーになるのでコメントアウトしています。  
 まずDiscordとGitHubを連携させる必要があります。
 ```shell
-    <!--
-    - name: Discord Notification
-      uses: sarisia/actions-status-discord@v1
-      if: always()
-      with:
-        webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        status: ${{ job.status }}
-        content: "Hey <@everyone>"
-        title: "Checkstyle"
-        description: "Run Checkstyle"
-        color: "#cb88d2"
-        url: "https://github.com/sarisia/actions-status-discord"
-        username: GitHub Actions
-   -->
+    #- name: Discord Notification
+    #  uses: sarisia/actions-status-discord@v1
+    #  if: always()
+    #  with:
+    #    webhook: ${{ secrets.DISCORD_WEBHOOK }}
+    #    status: ${{ job.status }}
+    #    content: "Hey <@everyone>"
+    #    title: "Checkstyle"
+    #    description: "Run Checkstyle"
+    #    color: "#cb88d2"
+    #    url: "https://github.com/sarisia/actions-status-discord"
+    #    username: GitHub Actions
 ```
 
 ### キーワードの役割
